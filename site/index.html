@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CHAT</title>
+        <link id="css" rel="stylesheet" href="../css/style.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        
+        
+        <script src="../js/behaviour.js"></script>
+    </head>
+    <body onload="img_modo()">
+        <div id="contenido" class="contenido">
+
+            <!-- HEADER -->
+            <div class="header1">
+                <div class="div_logo" onmousedown="show_menu('menu1')">
+                    <img src="../img/logo_1.png" width="95%" style="margin-top: 3px;">
+                </div>
+                <div class="div_user" onmousedown="show_menu('menu2')">
+                    <div class="ball_usuario">
+                        <img class="img_usuario" src="../img/user.png" width="30">
+                    </div>
+                    <ul class="div_user_data">
+                        <i style="font-size:0.8rem; font-style: normal;">Alejandro Cavieres M.</i><br>
+                        <div class="ball_activo">&nbsp;</div><i style="font-size:0.7rem; font-style: normal;">&nbsp;&nbsp;Activo Ahora</i>
+                        <div class="arrow-down"><i class="fa fa-sort-down arrow-down" aria-hidden="true"></i></div>
+                    </ul>
+                </div>
+                <div class="div_solicitudes">
+                    <div style="width: 28px; height: 30px;">
+                        <div class="ball_atencion">50</div>
+                    </div>
+                    SOLICITUDES 
+                </div>
+                
+            </div>
+            <div class="shadow1"></div>
+
+            <!-- MENNU 1 -->
+            <div id="menu1" class="menu1"><br>
+                <ul style="font-size: 10px;">
+                    <div style="height: 2px;">&nbsp;</div>
+                    <div class="menu-item"><i class="fa fa-weixin"></i>&nbsp;&nbsp;Conversaciones<i class="fa fa-sort-down arrow-down" aria-hidden="true"></i></div>
+                    <div class="menu-item"><i class="fa fa-user-circle-o"></i>&nbsp;&nbsp;Usuarios<i class="fa fa-sort-down arrow-down" aria-hidden="true"></i></div>
+                    <div class="menu-item"><i class="fa fa-bar-chart"></i>&nbsp;&nbsp;Reportes<i class="fa fa-sort-down arrow-down" aria-hidden="true"></i></div>
+                    <div class="menu-item"><i class="fa fa-table"></i>&nbsp;&nbsp;Tablas<i class="fa fa-sort-down arrow-down" aria-hidden="true"></i></div>
+                    <div class="menu-item"><i class="fa fa-cogs"></i>&nbsp;Integraciones<i class="fa fa-sort-down arrow-down" aria-hidden="true"></i></div>
+                    <div class="menu-item" onclick="display_zona('subm_5')">
+                        <i><img id="bot_icon" src="../img/bot.png" class="bot_icon"></i>&nbsp;Easy BOT
+                        <i class="fa fa-sort-down arrow-down" aria-hidden="true"></i>
+                    </div>
+                    
+                    <div id="subm_5" class="div_subm">
+                        <div class="shadow2" style="height: 10px;"></div>
+                        <div style="width: 100%; height: 3px;"></div>
+                        <div class="sub-menu"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Diseño</div>
+                        <div class="sub-menu"><i class="fa fa-clock-o" aria-hidden="true"></i>Horario</div>
+                    </div> 
+                    
+                </ul>
+            </div>
+
+            <!-- MENNU 2 -->
+            <div id="menu2" class="menu2">
+                <div class="line0"></div>
+                <div class="line"></div>
+                <ul style="font-size: 10px;">
+                    <div style="height: 2px;">&nbsp;</div>
+                    <div id="modo" class="menu-item" onclick="switch_1()"><i class="fa fa-adjust"></i>&nbsp;&nbsp;Modo Claro</div>
+                    <div class="menu-item" onclick="open_1('modal1', 'block')"><i class="fa fa-cog"></i>&nbsp;&nbsp;Configuración</div>
+                    <div class="menu-item" onclick="javascript:window.location.href='../login.html'"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Salir</div>
+                </ul>
+            </div>
+
+            <!-- CONTENIDO -->
+            <div id="contenedor" class="contenedor">
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                TEST<br>
+                              
+
+            </div>
+
+            <!-- MODAL 1 -->
+            <div id="modal1" class="modal1">
+                <div id="close" class="close" onclick="close_1('modal1')"><img src="../img/close_icon.png" width="20px" height="20px"></div>
+                <div class="title" style="width: 100%;">
+                    <i class="fa fa-cog" style="font-size: 1.4rem;"><span>&nbsp;&nbsp;Configuración</span></i>
+                </div>
+                <div class="line0" style="position: relative; width: 100%; margin-top:5px;"></div>
+                <div id="general">
+                    <div class="title1">General</div>
+                    <div style="width: 200px;">
+                        <div class="option" onclick="toggle_1('gen_opt1')">Notificaciones de Escritorio<i id="gen_opt1" class="fa fa-toggle-on of" aria-hidden="true"></i></div>
+                        <div class="option" onclick="toggle_1('gen_opt2')">Notificación de Audio<i id="gen_opt2" class="fa fa-toggle-on of" aria-hidden="true"></i></div>
+                        <div class="option" onclick="toggle_1('gen_opt3')">Enviar al presionar "ENTER"<i id="gen_opt3" class="fa fa-toggle-on of" aria-hidden="true"></i></div>
+                        <div class="option" onclick="toggle_1('gen_opt3')">Página de inicio</div>
+                        <div class="option" onclick="toggle_1('gen_opt3')">&nbsp;&nbsp;&nbsp;&nbsp;<i id="gen_opt3" class="fa fa-circle" aria-hidden="true"></i>&nbsp;Estadisticas</div>
+                        <div class="option" onclick="toggle_1('gen_opt3')">&nbsp;&nbsp;&nbsp;&nbsp;<i id="gen_opt3" class="fa fa-circle-o" aria-hidden="true"></i>&nbsp;Mis tareas</div>
+
+                        
+                    </div>
+                </div>
+
+                <!-- MODAL 1 -->
+                <div id="mod_footer" class="mod_footer">
+                    <div class="line0" style="position: relative; width: 100%;margin-bottom: 10px;"></div>
+                    <div class="bot_save">GUARDAR</div>
+                    <div class="bot_cancel" onclick="close_1('modal1')">CANCELAR</div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
